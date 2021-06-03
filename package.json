@@ -1,0 +1,48 @@
+{
+  "name": "toy-robot-challenge",
+  "version": "1.0.0",
+  "main": "lib/app.js",
+  "license": "MIT",
+  "private": true,
+  "engines": {
+    "node": "14.x"
+  },
+  "keywords": [
+    "ts",
+    "robot",
+    "challenge"
+  ],
+  "author": "Pawel Targosz <pmtargosz@gmail.com> (https://github.com/pmtargosz)",
+  "bin": {
+    "robotChallenge": "./lib/app.js"
+  },
+  "scripts": {
+    "start": "npm run i && npm run build && npm run remove && npm run global",
+    "i": "npm install --engine-strict=true",
+    "build": "npm run clean && tsc -p .",
+    "remove": "npm uninstall -g toy-robot-challenge",
+    "global": "npm i -g . && robotChallenge",
+    "clean": "rm -rf ./lib",
+    "dev": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/app.ts",
+    "test": "jest --watchAll --silent src/*"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.14.3",
+    "@babel/preset-env": "^7.14.4",
+    "@babel/preset-typescript": "^7.13.0",
+    "@types/inquirer": "^7.3.1",
+    "@types/jest": "^26.0.23",
+    "@types/node": "^15.6.1",
+    "babel-jest": "^27.0.2",
+    "eslint": "^7.27.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "inquirer": "^8.1.0",
+    "jest": "^27.0.3",
+    "mock-stdin": "^1.0.0",
+    "nodemon": "^2.0.7",
+    "prettier": "^2.3.0",
+    "ts-node": "^10.0.0",
+    "typescript": "^4.3.2"
+  }
+}

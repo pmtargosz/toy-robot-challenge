@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "commonjs",
+    "rootDir": "src",
+    "outDir": "lib",
+    "esModuleInterop": true,
+    "strict": true,
+    "moduleResolution": "node",
+    "sourceMap": false,
+    "declaration": false,
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true
+  },
+  "lib": ["es2015"],
+  "exclude": ["./src/**/*.spec.ts"]
+}
