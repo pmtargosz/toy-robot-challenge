@@ -30,8 +30,9 @@ class Table implements TableInterface {
   }
   public setRobot(x: number, y: number, direction: Directions) {
     this.clearTable();
-    //[y][x]
-    this.table[this.x - 1 - y][x] = TableDirection[direction];
+    const mapXToTableIndex = y === 0 ? this.x - 1 : this.x - y;
+    const mapYToTableIndex = x === this.y ? x - 1 : x;
+    this.table[mapXToTableIndex][mapYToTableIndex] = TableDirection[direction];
     console.table(this.table);
   }
 }
