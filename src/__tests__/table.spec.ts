@@ -9,8 +9,8 @@ describe('Table', () => {
 
   it('create default table 5 x 5.', () => {
     const table = new Table();
-    expect(table['x']).toBe(5);
-    expect(table['y']).toBe(5);
+    expect(table['x']).toBe(6);
+    expect(table['y']).toBe(6);
   });
 
   it('create custom table 10 x 2.', () => {
