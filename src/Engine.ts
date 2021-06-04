@@ -84,7 +84,7 @@ You can type (command are not case sensitive):
     const { x, y } = this.table.getDimensions();
 
     // Check if positions from command are on table.
-    if (Number(posX) > y || Number(posY) > x) {
+    if (Number(posX) > x - 1 || Number(posY) > y - 1) {
       return console.log(
         `\n==> !!!! SORRY BUT POSITION IS OFF THE TABLE. YOU DON\'T WANT TO DESTROYED ROBOT. PLEASE PUT ROBOT ON THE TABLE (table dimensions ${x} units x ${y} units) - INVALID PLACE COMMAND !!!!\n`
       );

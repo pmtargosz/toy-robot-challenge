@@ -44,7 +44,7 @@ class Robot implements RobotInterface {
   public move(tableX: number, tableY: number) {
     switch (this.position?.direction) {
       case ValidDirections.north:
-        if (this.position.y + 1 > tableX - 1)
+        if (this.position.y + 1 > tableY - 1)
           return console.log("\n==> !!! ROBOT CAN'T MOVED. END OF TABLE !!!\n");
         this.position.y += 1;
         break;
@@ -54,7 +54,7 @@ class Robot implements RobotInterface {
         this.position.y -= 1;
         break;
       case ValidDirections.east:
-        if (this.position.x + 1 > tableY - 1)
+        if (this.position.x + 1 > tableX - 1)
           return console.log("\n==> !!! ROBOT CAN'T MOVED. END OF TABLE !!!\n");
         this.position.x += 1;
         break;

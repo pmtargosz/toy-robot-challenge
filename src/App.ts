@@ -26,7 +26,7 @@ async function getTableDimensions(): Promise<{ x: number; y: number }> {
   async function dimensionsInputValidation(): Promise<{ x: number; y: number }> {
     const { x, y } = await askForDimensions.ask();
     if (!isNaN(x) && !isNaN(y) && Number(x) >= 0 && Number(y) >= 0) {
-      return { x: Number(x), y: Number(y) };
+      return { x: Number(x) + 1, y: Number(y) + 1 };
     }
 
     console.log('\n==> Please enter a number! X and Y have to be a positive number!\n');
